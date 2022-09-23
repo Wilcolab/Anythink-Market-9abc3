@@ -9,7 +9,6 @@ import {
   ITEM_PAGE_UNLOADED,
 } from "../../constants/actionTypes";
 
-const Placeholder = "../placeholder.png";
 const mapStateToProps = (state) => ({
   ...state.item,
   currentUser: state.common.currentUser,

@@ -19,7 +19,7 @@ const mapDispatchToProps = (dispatch) => ({
 
 const ItemPreview = (props) => {
   const item = props.item;
-  console.log(item.image);
+
   const handleClick = (ev) => {
     ev.preventDefault();
     if (item.favorited) {
