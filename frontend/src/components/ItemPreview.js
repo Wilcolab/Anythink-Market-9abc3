@@ -4,8 +4,6 @@ import agent from "../agent";
 import { connect } from "react-redux";
 import { ITEM_FAVORITED, ITEM_UNFAVORITED } from "../constants/actionTypes";
 
-
-
 const mapDispatchToProps = (dispatch) => ({
   favorite: (slug) =>
     dispatch({
@@ -21,7 +19,7 @@ const mapDispatchToProps = (dispatch) => ({
 
 const ItemPreview = (props) => {
   const item = props.item;
-  console.log(item.image)
+  console.log(item.image);
   const handleClick = (ev) => {
     ev.preventDefault();
     if (item.favorited) {
