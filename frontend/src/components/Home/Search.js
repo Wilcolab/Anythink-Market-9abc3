@@ -8,7 +8,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  filterByTitle: (title, payload) => dispatch({ type: SEARCH_BY_TITLE, title, payload }),
+  filterByTitle: (title, payload) =>
+    dispatch({ type: SEARCH_BY_TITLE, title, payload }),
 });
 
 const Search = (props) => {
@@ -17,8 +18,8 @@ const Search = (props) => {
 
     if (val.length > 3) {
       props.filterByTitle(val, agent.Items.searchByTitle(val));
-    } else {
-      props.filterItemsByTitle(agent.Items.all());
+    } else if (!val || val.length < 3) {
+      props.filterItemsByTitle("", agent.Items.all());
     }
 
     return;
