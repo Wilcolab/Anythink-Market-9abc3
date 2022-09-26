@@ -16,7 +16,7 @@ const Search = (props) => {
   const handleSearch = (evt) => {
     const val = evt.target.value;
 
-    if (val.length > 3) {
+    if (val && val.length >= 3) {
       props.filterByTitle(val, agent.Items.searchByTitle(val));
     } else if (!val || val.length < 3) {
       props.filterByTitle("", agent.Items.all());
