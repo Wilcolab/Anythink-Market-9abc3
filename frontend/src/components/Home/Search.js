@@ -19,7 +19,7 @@ const Search = (props) => {
     if (val.length > 3) {
       props.filterByTitle(val, agent.Items.searchByTitle(val));
     } else if (!val || val.length < 3) {
-      props.filterItemsByTitle("", agent.Items.all());
+      props.filterByTitle("", agent.Items.all());
     }
 
     return;
