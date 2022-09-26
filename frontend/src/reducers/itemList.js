@@ -42,6 +42,7 @@ const reducer = (state = {}, action) => {
         ...state,
         items: action.payload.items,
         itemsCount: action.payload.itemsCount,
+        searchTitle: action.title,
       };
     case APPLY_TAG_FILTER:
       return {
