@@ -9,7 +9,7 @@ import {
   HOME_PAGE_UNLOADED,
   APPLY_TAG_FILTER,
 } from "../../constants/actionTypes";
-import Search from "./Search";
+
 
 const Promise = global.Promise;
 
@@ -47,7 +47,7 @@ class Home extends React.Component {
     return (
       <div className="home-page">
         <Banner />
-        <Search />
+
         <div className="container page">
           <Tags tags={this.props.tags} onClickTag={this.props.onClickTag} />
           <MainView />
