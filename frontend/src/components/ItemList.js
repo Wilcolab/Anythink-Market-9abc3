@@ -8,7 +8,7 @@ const ItemList = (props) => {
   }
 
   if (props.items.length === 0) {
-    if (props.searchTitle && props.searchTitle.length >= 3) {
+    if (props.searchTitle) {
       return (
         <div
           id="empty"
